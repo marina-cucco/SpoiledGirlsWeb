@@ -1,11 +1,11 @@
 import { NavBar } from "@/components/NavBar"
 
-export default function Movimentacoes() {
+export default function Cadastro() {
   return ( //arquivo JSX - gera o html na hora de renderizar mas nao eh exatamente html
     <main className="flex min-h-screen flex-col items-center">
-      <NavBar active="Movimentacoes"/>
+      <NavBar active="cadastro"/>
 
-      <h2>Movimentacoes</h2>
+      <h2>Categorias</h2>
     </main>
   );
 }
