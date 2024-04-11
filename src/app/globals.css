@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 217, 217, 217; /*colocar as cores que estao no figma. esse eh do prof*/
+  --background-start-rgb: 241, 240, 234;  /*colocar as cores que estao no figma. esse eh do prof*/
+  --background-end-rgb: 241, 240, 234;
+}
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
