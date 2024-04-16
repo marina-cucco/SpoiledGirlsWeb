@@ -9,12 +9,14 @@ export function NavBar(props: NavBarProps) {
 
   return (
     <nav className=' flex justify-between items-center px-8 py-2 bg-zinc-900 w-full'>
-      <h1
-        className='ml-20' 
-        style={{ fontSize: "2.81rem", fontFamily: "Prata, serif" }}
-      >
-        Spoiled Girls Club
-      </h1>
+      <Link href="/">
+        <h1
+          className='ml-20 text-center text-white'
+          style={{ fontSize: "2.81rem", fontFamily: "Prata, serif" }}
+          >
+          Spoiled Girls Club
+        </h1>
+      </Link>
       {/*
         <ul className="flex gap-6">
           <li className={active == "home" ? classActive : ""}>
@@ -29,8 +31,13 @@ export function NavBar(props: NavBarProps) {
         </ul>
         */}
       <div className='ml-96 pl-48'>
-        <Link href={"/Carrinho/page.tsx"}>
-          <img src='/assets/carrinho.svg' alt='Carrinho de compras'  width="42" height="42"/>
+        <Link href={"/Carrinho/"}>
+          <img
+            src='/assets/carrinho.svg'
+            alt='Carrinho de compras'
+            width='42'
+            height='42'
+          />
         </Link>
       </div>
       <div className='size-14 rounded-full overflow-hidden mr-24 mb-2'>
