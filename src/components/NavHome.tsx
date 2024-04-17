@@ -14,37 +14,37 @@ export function NavHome(props: NavHomeProps) {
   const classActive = "border-b-2 border-black pb-1.5";
 
   return (
-    <nav className='flex justify-center items-center  py-4 text-black w-full'>
+    <nav className='flex justify-center items-center  py-6 w-full'  style={{color:"var(--cor-primaria)", fontSize: "0.9rem"}}>
       <ul className='flex gap-6'>
         <li
           className={active == "home" ? classActive : ""}
-          style={{ fontSize: "1.2rem", fontFamily: "Prata, serif" }}
+          style={{fontFamily: "Prata, serif" }}
         >
-          <Link href='/'>Home</Link>
+          <Link href='/'>HOME</Link>
         </li>
         <li
           className={active == "colecaoCasuals" ? classActive : ""} 
-          style={{ fontSize: "1.2rem", fontFamily: "Prata, serif" }}
+          style={{fontFamily: "Prata, serif" }}
         >
-          <Link href='/'>Coleção Casuals</Link>
+          <Link href='/'>COLEÇÃO CASUALS</Link>
         </li>
         <li
           className={active == "colecaoInverno" ? classActive : ""}
-          style={{ fontSize: "1.2rem", fontFamily: "Prata, serif" }}
+          style={{fontFamily: "Prata, serif" }}
         >
-          <Link href='/'>Coleção Inverno 2024</Link>
+          <Link href='/'>COLEÇÃO INVERNO 2024</Link>
         </li>
         <li
           className={active == "colecaoVerao" ? classActive : ""}
-          style={{ fontSize: "1.2rem", fontFamily: "Prata, serif" }}
+          style={{fontFamily: "Prata, serif" }}
         >
-          <Link href='/'>Coleção Verão 2024</Link>
+          <Link href='/'>COLEÇÃO VERÃO 2024</Link>
         </li>
         <li
           className={active == "todasColecoes" ? classActive : ""}
-          style={{ fontSize: "1.2rem", fontFamily: "Prata, serif" }}
+          style={{fontFamily: "Prata, serif" }}
         >
-          <Link href='/'>Todas as Coleções</Link>
+          <Link href='/'>TODAS AS COLEÇÕES</Link>
         </li>
       </ul>
     </nav>
