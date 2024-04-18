@@ -1,6 +1,8 @@
 import { Botao } from "@/components/Botao";
+import Link from "next/link";
 
-export function Colecao({titulo = "COLEÇÃO CASUALS", subtitulo = "Essenciais para o seu dia a dia.", imagem = "/assets/PhotoModel1.png", alt = "",  customClass="ml-40"}) { 
+export function Colecao({
+    titulo = "TÍTULO", subtitulo = "Subtítulo", imagem = "/assets/", alt = "", link = '/', customClass="ml-40"}) { 
   return (
     <div className="flex items-center justify-center mt-10 mb-16">
         <div className="flex flex-col justify-center">
@@ -14,7 +16,9 @@ export function Colecao({titulo = "COLEÇÃO CASUALS", subtitulo = "Essenciais p
                 style={{ fontSize: "2.18rem", fontFamily: "Libre Baskerville, serif", color:"var(--cor-primaria)"}}
                 dangerouslySetInnerHTML={{__html: subtitulo}}>
             </span>
-            <Botao/>
+            <Link href= {link}>
+                <Botao/>
+            </Link>
         </div>
         <div className={`${customClass}`}>
             <img src={imagem} alt={alt} />

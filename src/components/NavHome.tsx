@@ -26,25 +26,25 @@ export function NavHome(props: NavHomeProps) {
           className={active == "colecaoCasuals" ? classActive : ""} 
           style={{fontFamily: "Prata, serif" }}
         >
-          <Link href='/'>COLEÇÃO CASUALS</Link>
+          <Link href='/ColecaoCasuals'>COLEÇÃO CASUALS</Link>
         </li>
         <li
           className={active == "colecaoInverno" ? classActive : ""}
           style={{fontFamily: "Prata, serif" }}
         >
-          <Link href='/'>COLEÇÃO INVERNO 2024</Link>
+          <Link href='/ColecaoInverno'>COLEÇÃO INVERNO 2024</Link>
         </li>
         <li
           className={active == "colecaoVerao" ? classActive : ""}
           style={{fontFamily: "Prata, serif" }}
         >
-          <Link href='/'>COLEÇÃO VERÃO 2024</Link>
+          <Link href='/ColecaoVerao'>COLEÇÃO VERÃO 2024</Link>
         </li>
         <li
           className={active == "todasColecoes" ? classActive : ""}
           style={{fontFamily: "Prata, serif" }}
         >
-          <Link href='/'>TODAS AS COLEÇÕES</Link>
+          <Link href='/Colecoes'>TODAS AS COLEÇÕES</Link>
         </li>
       </ul>
     </nav>

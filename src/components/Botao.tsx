@@ -8,7 +8,7 @@ export function Botao({texto = 'COMPRE AGORA', width = '18rem', py= '2', fontSiz
                     backgroundColor:"var(--cor-primaria)", 
                     color:"var(--cor-texto-btn)",
                     width: width
-                    }}>
+                    }}>               
                 {texto}
         </button>
     );

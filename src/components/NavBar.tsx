@@ -2,9 +2,12 @@ import Link from "next/link";
 
 export function NavBar() {
   return (
-    <nav className=' flex justify-between items-center px-8 py-2 w-full' style={{backgroundColor: "var(--cor-primaria)"}}>
+    <nav className='flex justify-between items-center px-8 py-2 w-full' 
+      style={{backgroundColor: "var(--cor-primaria)"}}>
       <div className="flex items-center gap-2 ml-20">
-        <img src="assets/logo2.svg" className="w-8 flex justify-center mr-2"/>
+        <Link href="/">
+          <img src="assets/logo2.svg" className="w-8 flex justify-center mr-2"/>
+        </Link>
         <Link href="/">
           <h1
             className=''
@@ -14,13 +17,12 @@ export function NavBar() {
           </h1>
         </Link>
      </div>
-      <div className='ml-96 pl-48'>
+      <div className='ml-96 pl-44'>
         <Link href={"/Carrinho/"}>
           <img
-            src='/assets/carrinho.svg'
+            src='/assets/shopping-cart.svg'
             alt='Carrinho de compras'
-            width='42'
-            height='42'
+
           />
         </Link>
       </div>
