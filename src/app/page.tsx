@@ -26,6 +26,7 @@ export default function Home() {
            titulo="COLEÇÃO VERÃO 2024" subtitulo="Desperte sua beleza natural<br>com leveza e suavidade." imagem="assets/PhotoModel3.png" alt="" link="/ColecaoVerao" customClass="ml-48 pl-2"
           />
       </main>
+      <Footer></Footer>
     </div>
   );
 }

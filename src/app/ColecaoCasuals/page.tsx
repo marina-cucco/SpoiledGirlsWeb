@@ -1,5 +1,6 @@
 import { NavBar } from "@/components/NavBar";
 import { NavHome } from "@/components/NavHome";
+import { Footer } from "@/components/Footer";
 
 export default function ColecaoCasuals(){
     return(
@@ -12,6 +13,7 @@ export default function ColecaoCasuals(){
                     Essenciais para o seu dia a dia.
                 </h1>
             </main>
+            <Footer></Footer>
         </div>
 
     );
