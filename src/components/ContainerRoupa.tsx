@@ -9,13 +9,13 @@ export function ContainerRoupa({
         <img
          className="w-80 h-80" src={imagem} alt={alt}
          style={{ 
-            width: "21.25rem",
-            height : "21.25rem",
+            width: "18.75rem",
+            height : "18.75rem",
         }}/>               
         <div>
             <div className="mt-7 mb-4">
                 <h1
-                style={{ fontSize: "2rem", fontFamily: "Prata, serif", color:"var(--cor-primaria)"}}>
+                style={{ fontSize: "1.5rem", fontFamily: "Prata, serif", color:"var(--cor-primaria)"}}>
                     {roupa}
                 </h1>
                 <h5 className="font-bold"
@@ -23,7 +23,7 @@ export function ContainerRoupa({
                     R${preco}
                 </h5>
             </div>     
-            <Botao texto="COMPRAR" width="21.25rem" height="4rem"></Botao>
+            <Botao texto="COMPRAR" width="18.75rem" height="4rem"></Botao>
         </div>
     </div>
     
