@@ -1,4 +1,5 @@
 import { NavBar } from "@/components/NavBar"
+import InputLabel from "@/components/InputLabel";
 
 export default function Cadastro() {
   return ( //arquivo JSX - gera o html na hora de renderizar mas nao eh exatamente html
@@ -16,7 +17,7 @@ export default function Cadastro() {
                         <img src='/assets/Group 2.svg' alt='facebook'/>
                     </div>
                   <h4 style={{ fontSize: "1.80rem"}}>Cadastre-se</h4>
-                <img src='/assets/login-cadastro.svg' alt='email de cadstro'/>
+                  <InputLabel/>
                 <h4 style={{ fontSize: "1.00rem"}}>Já possui uma conta?</h4>
               </div>
         </div>
