@@ -1,3 +1,7 @@
+![Homepage](https://media.discordapp.net/attachments/1075996497407123509/1230325802978115724/image.png?ex=6632e931&is=66207431&hm=bf6fc9818cfbcbf947b2796457d243c017421552e4cfe7e777120c3c9c90adae&=&format=webp&quality=lossless&width=775&height=415)
+
+![Figma](https://media.discordapp.net/attachments/1075996497407123509/1230325802667606046/Captura_de_tela_2024-04-17_221255.png?ex=6632e931&is=66207431&hm=a3c41f81a771e696d90c1e0ca68dcf66b8fbc6c73beadf0a9553995047dac851&=&format=webp&quality=lossless&width=728&height=415)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
