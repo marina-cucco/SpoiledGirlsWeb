@@ -1,4 +1,4 @@
-export function Botao({texto = 'COMPRE AGORA', width = '18rem', height = '4.3 rem', py= '2', fontSize = '2.5rem'}) { 
+export function Botao({texto = 'COMPRE AGORA', width = '18rem', height = '4.3 rem', py= '2rem', fontSize = '2.5rem'}) { 
     return (
         <button 
                 className={`py-${py} flex items-center justify-center`}

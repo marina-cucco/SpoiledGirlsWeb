@@ -2,7 +2,7 @@ import { Botao } from "@/components/Botao";
 import Link from "next/link";
 
 export function ContainerRoupa({
-    roupa = "ROUPA", preco = "00,00", imagem = "/assets/", alt = ""}) { 
+    roupa = "ROUPA", preco = "00,00", imagem = "/assets/", alt = "", link = '/ViewProduto'}) { 
   return (
     
     <div className="py-10">
@@ -23,7 +23,9 @@ export function ContainerRoupa({
                     R${preco}
                 </h5>
             </div>     
-            <Botao texto="COMPRAR" width="18.75rem" height="4rem"></Botao>
+            <Link href= {link}>
+                <Botao texto="COMPRAR" width="18.75rem" height="4rem"></Botao>
+            </Link>
         </div>
     </div>
     
