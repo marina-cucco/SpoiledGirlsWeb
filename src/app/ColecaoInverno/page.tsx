@@ -38,38 +38,40 @@ export default function ColecaoInverno() {
               imagem='/assets/Outfits/Winter3.png'
             />
           </div>
+
           <div className='flex items-center justify-center gap-20'>
             <ContainerRoupa
               roupa='Blazer Amplo'
               preco='109.99'
-              imagem='/assets/Outfits/Winter5.png'
+              imagem='/assets/Outfits/Winter4.png'
             />
             <ContainerRoupa
               roupa='Moletom com Capuz'
               preco='69.99'
-              imagem='/assets/Outfits/Winter6.png'
-            />   
+              imagem='/assets/Outfits/Winter5.png'
+            />
             <ContainerRoupa
               roupa='Calça Alfaiataria'
               preco='79.99'
-              imagem='/assets/Outfits/Winter4.png'
-            />        
+              imagem='/assets/Outfits/Winter6.png'
+            />
           </div>
+          
           <div className='flex items-center justify-center gap-20 mb-16'>
-          <ContainerRoupa
+            <ContainerRoupa
               roupa='Camisa Slim Popeline'
               preco='59.99'
-              imagem='/assets/Outfits/Winter8.png'
+              imagem='/assets/Outfits/Winter7.png'
             />
-          <ContainerRoupa
+            <ContainerRoupa
               roupa='Blazer Angorá'
               preco='89.99'
-              imagem='/assets/Outfits/Winter9.png'
+              imagem='/assets/Outfits/Winter8.png'
             />
             <ContainerRoupa
               roupa='Vestido Longo'
               preco='129.99'
-              imagem='/assets/Outfits/Winter7.png'
+              imagem='/assets/Outfits/Winter9.png'
             />
           </div>
         </div>

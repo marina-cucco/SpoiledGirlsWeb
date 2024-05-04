@@ -42,34 +42,34 @@ export default function ColecaoCasuals() {
             <ContainerRoupa
               roupa='Jaqueta Jeans'
               preco='79.99'
-              imagem='/assets/Outfits/Casuals8.png'
+              imagem='/assets/Outfits/Casuals4.png'
             />
             <ContainerRoupa
               roupa='Camisa Social'
               preco='59.99'
-              imagem='/assets/Outfits/Casuals7.png'
+              imagem='/assets/Outfits/Casuals5.png'
             />
             <ContainerRoupa
               roupa='Mommy Jeans'
               preco='79.99'
-              imagem='/assets/Outfits/Casuals4.png'
+              imagem='/assets/Outfits/Casuals6.png'
             />
           </div>
           <div className='flex items-center justify-center gap-20 mb-16'>
             <ContainerRoupa
               roupa='Casaco Esportivo'
               preco='89.99'
-              imagem='/assets/Outfits/Casuals5.png'
+              imagem='/assets/Outfits/Casuals7.png'
             />
             <ContainerRoupa
               roupa='Flare Jeans'
               preco='74.99'
-              imagem='/assets/Outfits/Casuals9.png'
+              imagem='/assets/Outfits/Casuals8.png'
             />
             <ContainerRoupa
               roupa='Minivestido em Seda'
               preco='119.99'
-              imagem='/assets/Outfits/Casuals6.png'
+              imagem='/assets/Outfits/Casuals9.png'
             />
           </div>
         </div>
