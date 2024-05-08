@@ -1,9 +1,40 @@
-import { NavBar } from "@/components/NavBar"
+"use client";
+
 import InputLabel from "@/components/InputLabel";
 import { Botao } from "@/components/Botao";
+import {useState} from "react";
+import { create } from "@/app/actions/create";
+import { v4 as uuidv4 } from 'uuid';
+
 
 export default function Cadastro() {
-  return ( //arquivo JSX - gera o html na hora de renderizar mas nao eh exatamente html
+  const [id, setId] = useState(""); 
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+
+    async function handleClick() {
+      const newId = uuidv4(); // Gera um novo ID único
+      setId(newId); // Atualiza o estado do id com o novo ID gerado
+      const data = {
+        id: newId, // Use o novo ID gerado
+        email,
+        senha
+      };
+
+      setTimeout(() => {
+        alert("Requisição de cadastro feita com sucesso!");
+      }, 1000);
+
+    const response = await create(data);
+
+    if (response) {
+      alert("cadastrado")
+    }
+    console.log("Dados do cadastro:", data);
+      };
+
+  return ( 
+    
     <main className="flex min-h-screen flex-col">
 
       <div className="flex flex-1">
@@ -22,15 +53,14 @@ export default function Cadastro() {
           </div>
           </div>
           <div className='mt-8 mb-1 ml-32'>
-          <InputLabel />
+          <InputLabel setEmail={setEmail} setSenha={setSenha} />
           </div>
           <div className='p-1 justify-end ml-80'>
           <Botao texto="ESQUECI MINHA SENHA" width="8rem" height="1.0rem" py="1" fontSize="0.9rem" customClass="white" textColor="var(--cor-primaria)"/>
           </div>
           <div className="flex-col items-center justify-center mt-10">
-          <h4 style={{ fontSize: "1.30rem" }}>Já possui uma conta?</h4>
             <div className = "flex justify-center mt-1">
-              <Botao texto="LOGIN" width="12rem" height="2.5rem" py="1" fontSize="1.3rem" customClass="var(--terciaria)" textColor="var(--cor-primaria)"/>
+              <Botao onClick={handleClick} texto="CADASTRAR" width="12rem" height="2.5rem" py="1" fontSize="1.3rem" customClass="var(--terciaria)" textColor="var(--cor-primaria)"/>
             </div>
           </div>
         </div>
