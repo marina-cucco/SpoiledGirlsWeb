@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 
 
 interface Cadastro {
-    id: string,
+    id: number,
     email: string,
     senha: string
 }
@@ -19,12 +19,14 @@ interface Cadastro {
 export default function Informacoes({id}: Cadastro) {
     const [logado, setLogado] = useState(false); // Estado para controlar se o usuário está logado
     const [perfil, setPerfil] = useState<Cadastro | null>(null); // Estado para armazenar as informações do perfil
+    const [idUsuario, setIdUsuario] = useState<number | null>(null); // Estado para armazenar as informações do perfil
 
     useEffect(() => {
         async function fetchPerfil() {
             try {
                 const perfilData = await get(); // Chamando o método get para obter os dados do perfil
-                setPerfil(perfilData);
+                setPerfil(perfilData)
+                setIdUsuario(perfilData[0].id)
             } catch (error) {
                 console.error("Erro ao buscar perfil:", error);
             }
@@ -34,12 +36,15 @@ export default function Informacoes({id}: Cadastro) {
     }, []);
 
     const handleLogin = async () => {
+        console.log("iniciando")
         try {
             // Lógica de login aqui...
             // Verifica se o login foi bem-sucedido e se o perfil existe na API
             const perfilData = await get();
+            setPerfil(perfilData)
             if (perfilData) {
                 setLogado(true); // Define o estado logado como true se o login for bem-sucedido
+                setIdUsuario(perfilData[0].id)
             } else {
                 console.error("Usuário não encontrado.");
                 alert("Usuário não encontrado!")
@@ -49,6 +54,12 @@ export default function Informacoes({id}: Cadastro) {
             alert("Usuário não encontrado!")
         }
     };
+
+    async function handleDelete() {
+        if (!idUsuario) return
+
+        destroy(idUsuario)
+    }
 
     //const categorias: Array<Cadastro> = await get()
     return (
@@ -96,7 +107,7 @@ export default function Informacoes({id}: Cadastro) {
                                             </Link>
                                         </div>
                                         <div>
-                                            <Botao texto="Apagar Conta" onClick={() => destroy(id)} width="9rem" height="3.00" py="1" fontSize="1.2rem" customClass="red" textColor="var(--cor-texto-btn)" />
+                                            <Botao texto="Apagar Conta" onClick={handleDelete} width="9rem" height="3.00" py="1" fontSize="1.2rem" customClass="red" textColor="var(--cor-texto-btn)" />
                                         </div>
                                     </div>
                                 </div>

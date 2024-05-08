@@ -5,10 +5,12 @@ import { Footer } from "@/components/Footer";
 import { Botao } from "@/components/Botao";
 import {useState} from "react";
 import { put } from "@/app/actions/put";
+import { useEffect } from 'react';
+import { get } from "@/app/actions/get";
 
 
 interface Cadastro {
-    id: string,
+    id: number,
     email: string,
     senha: string
 }
@@ -18,7 +20,23 @@ export default function NovaSenha({id}: Cadastro) {
     const [novaSenha, setNovaSenha] = useState('');
     const [confirmarSenha, setConfirmarSenha] = useState('');
     const [mensagem, setMensagem] = useState('');
+    const [idUsuario, setIdUsuario] = useState<number | null>(null);
+    const [perfil, setPerfil] = useState<Cadastro | null>(null);
 
+    useEffect(() => {
+        async function fetchPerfil() {
+            try {
+                const perfilData = await get(); // Chamando o método get para obter os dados do perfil
+                setPerfil(perfilData)
+                setIdUsuario(perfilData[0].id)
+            } catch (error) {
+                console.error("Erro ao buscar perfil:", error);
+            }
+        }
+
+        fetchPerfil();
+    }, []);
+    
     const handleChangeNovaSenha = (event: React.ChangeEvent<HTMLInputElement>) => {
         setNovaSenha(event.target.value);
     };
@@ -33,9 +51,16 @@ export default function NovaSenha({id}: Cadastro) {
             return;
         }
 
+        if (!idUsuario) {
+            // Handle the case where idUsuario is null
+            console.error('ID do usuário não encontrado.');
+            return;
+        }
+
         try {
-            await put(id, { senha: novaSenha });
-            setMensagem('Senha alterada com sucesso.');
+            await put(idUsuario, { senha: novaSenha });
+            setNovaSenha(novaSenha)
+        
         } catch (error) {
             console.error('Erro ao alterar senha:', error);
             setMensagem('Erro ao alterar senha. Tente novamente mais tarde.');

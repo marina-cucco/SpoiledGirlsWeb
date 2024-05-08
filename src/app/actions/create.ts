@@ -1,9 +1,9 @@
 "use server";
 
-export async function create(data:{id: string, // Exemplo de valor para id
+export async function create(data:{
 email: string,
 senha: string}) {
-    const resp = await fetch(`http://localhost:8080/cadastro/`, {
+    const resp = await fetch(`http://localhost:8080/Cadastro`, {
         method: "POST",
         body: JSON.stringify(data),
         headers: {

@@ -4,19 +4,14 @@ import InputLabel from "@/components/InputLabel";
 import { Botao } from "@/components/Botao";
 import {useState} from "react";
 import { create } from "@/app/actions/create";
-import { v4 as uuidv4 } from 'uuid';
 
 
 export default function Cadastro() {
-  const [id, setId] = useState(""); 
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
     async function handleClick() {
-      const newId = uuidv4(); // Gera um novo ID único
-      setId(newId); // Atualiza o estado do id com o novo ID gerado
       const data = {
-        id: newId, // Use o novo ID gerado
         email,
         senha
       };
