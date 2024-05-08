@@ -37,3 +37,15 @@ html {
     text-wrap: balance;
   }
 }
+
+.container {
+  width: 50%; /* Define a largura desejada (50% para dividir a página ao meio) */
+  height: 100vh; /* Define a altura da div container igual à altura da viewport */
+  float: left; /* Alinha a div ao lado esquerdo da página */
+}
+
+.conteudo {
+  margin: 0 auto; /* Centraliza horizontalmente dentro da div container */
+  max-width: 400px; /* Define uma largura máxima para o conteúdo */
+  padding: 20px;
+}
