@@ -27,12 +27,14 @@ export function NavBar() {
         </Link>
       </div>
       <div className='size-14 rounded-full overflow-hidden mr-24 mb-2'>
-        <img
-          className='flex justify-center'
-          src='/assets/user.svg'
-          alt='Avatar do usuário'
-        />
-      </div>
+      <Link href={"/Informacoes/"}>
+          <img
+            className='flex justify-center'
+            src='/assets/user.svg'
+            alt='Avatar do usuário'
+          />
+        </Link>
+        </div>
     </nav>
   );
 }
