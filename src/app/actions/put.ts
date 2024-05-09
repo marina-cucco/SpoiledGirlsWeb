@@ -1,5 +1,7 @@
 "use server";
 
+import { revalidateTag } from "next/cache";
+
 export async function put(id: number, data: { senha: string }) {
     const resp = await fetch(`http://localhost:8080/Cadastro/${id}`, {
         method: "PUT",
@@ -8,6 +10,6 @@ export async function put(id: number, data: { senha: string }) {
             "Content-Type": "application/json"
         },
     });
-
+    revalidateTag("cadastro")
     return resp.ok;
 }

@@ -1,5 +1,7 @@
 "use server";
 
+import { revalidateTag } from "next/cache";
+
 export async function create(data:{
 email: string,
 senha: string}) {
@@ -11,6 +13,6 @@ senha: string}) {
         },
 
      });
-
+     revalidateTag("cadastro")
      return resp.ok;
 }
